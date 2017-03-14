@@ -87,8 +87,7 @@
 <meta name="description" content="报错main.m:9:9: fatal error: &amp;apos;UIKit/UIKit.h&amp;apos; file not found
 #import &amp;lt;UIKit/UIKit.h&amp;gt;
     ^
-1 error generated.
-解决办法clang -x objective-c -rewrite-objc -isysroot /Applications/Xcode.app/Cont">
+1 error generated.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题">
 <meta property="og:url" content="http://linhfire.com/2016/09/23/关于使用clang(llvm)将oc文件转为c++文件报错的问题/index.html">
@@ -96,16 +95,14 @@
 <meta property="og:description" content="报错main.m:9:9: fatal error: &amp;apos;UIKit/UIKit.h&amp;apos; file not found
 #import &amp;lt;UIKit/UIKit.h&amp;gt;
     ^
-1 error generated.
-解决办法clang -x objective-c -rewrite-objc -isysroot /Applications/Xcode.app/Cont">
-<meta property="og:updated_time" content="2017-03-14T08:08:21.000Z">
+1 error generated.">
+<meta property="og:updated_time" content="2017-03-14T08:15:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题">
 <meta name="twitter:description" content="报错main.m:9:9: fatal error: &amp;apos;UIKit/UIKit.h&amp;apos; file not found
 #import &amp;lt;UIKit/UIKit.h&amp;gt;
     ^
-1 error generated.
-解决办法clang -x objective-c -rewrite-objc -isysroot /Applications/Xcode.app/Cont">
+1 error generated.">
 
 
 
@@ -282,7 +279,8 @@
 #import &lt;UIKit/UIKit.h&gt;
     ^
 1 error generated.
-</code></pre><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><pre><code>clang -x objective-c -rewrite-objc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk xxx.m
+</code></pre><a id="more"></a>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><pre><code>clang -x objective-c -rewrite-objc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk xxx.m
 </code></pre>
       
     </div>
