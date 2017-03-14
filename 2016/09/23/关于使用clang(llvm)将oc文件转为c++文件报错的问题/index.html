@@ -84,28 +84,28 @@
 
 
 
-<meta name="description" content="关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题报错main.m:9:9: fatal error: &amp;apos;UIKit/UIKit.h&amp;apos; file not found
+<meta name="description" content="title:关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题 报错main.m:9:9: fatal error: &amp;apos;UIKit/UIKit.h&amp;apos; file not found
 #import &amp;lt;UIKit/UIKit.h&amp;gt;
     ^
 1 error generated.
-解决办法clang -x objective-c -rewrite-objc -isy">
+解决办法clang -x objective-c -rewrite-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="qzlh521的博客">
 <meta property="og:url" content="http://linhfire.com/2016/09/23/关于使用clang(llvm)将oc文件转为c++文件报错的问题/index.html">
 <meta property="og:site_name" content="qzlh521的博客">
-<meta property="og:description" content="关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题报错main.m:9:9: fatal error: &amp;apos;UIKit/UIKit.h&amp;apos; file not found
+<meta property="og:description" content="title:关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题 报错main.m:9:9: fatal error: &amp;apos;UIKit/UIKit.h&amp;apos; file not found
 #import &amp;lt;UIKit/UIKit.h&amp;gt;
     ^
 1 error generated.
-解决办法clang -x objective-c -rewrite-objc -isy">
-<meta property="og:updated_time" content="2016-09-23T04:49:30.000Z">
+解决办法clang -x objective-c -rewrite-">
+<meta property="og:updated_time" content="2017-03-14T08:01:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="qzlh521的博客">
-<meta name="twitter:description" content="关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题报错main.m:9:9: fatal error: &amp;apos;UIKit/UIKit.h&amp;apos; file not found
+<meta name="twitter:description" content="title:关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题 报错main.m:9:9: fatal error: &amp;apos;UIKit/UIKit.h&amp;apos; file not found
 #import &amp;lt;UIKit/UIKit.h&amp;gt;
     ^
 1 error generated.
-解决办法clang -x objective-c -rewrite-objc -isy">
+解决办法clang -x objective-c -rewrite-">
 
 
 
@@ -278,11 +278,12 @@
       
 
       
-        <h1 id="关于使用Clang-LLVM-将OC文件转为C-C-文件报错的问题"><a href="#关于使用Clang-LLVM-将OC文件转为C-C-文件报错的问题" class="headerlink" title="关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题"></a>关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题</h1><h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><pre><code>main.m:9:9: fatal error: &apos;UIKit/UIKit.h&apos; file not found
+        <hr>
+<h2 id="title-关于使用Clang-LLVM-将OC文件转为C-C-文件报错的问题"><a href="#title-关于使用Clang-LLVM-将OC文件转为C-C-文件报错的问题" class="headerlink" title=" title:关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题 "></a> title:关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题 </h2><h3 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h3><pre><code>main.m:9:9: fatal error: &apos;UIKit/UIKit.h&apos; file not found
 #import &lt;UIKit/UIKit.h&gt;
     ^
 1 error generated.
-</code></pre><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><pre><code>clang -x objective-c -rewrite-objc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk xxx.m
+</code></pre><h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><pre><code>clang -x objective-c -rewrite-objc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk xxx.m
 </code></pre>
       
     </div>
@@ -418,7 +419,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#关于使用Clang-LLVM-将OC文件转为C-C-文件报错的问题"><span class="nav-number">1.</span> <span class="nav-text">关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#报错"><span class="nav-number">1.1.</span> <span class="nav-text">报错</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决办法"><span class="nav-number">1.2.</span> <span class="nav-text">解决办法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#title-关于使用Clang-LLVM-将OC文件转为C-C-文件报错的问题"><span class="nav-number">1.</span> <span class="nav-text"> title:关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题 </span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#报错"><span class="nav-number">1.1.</span> <span class="nav-text">报错</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决办法"><span class="nav-number">1.2.</span> <span class="nav-text">解决办法</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
