@@ -225,6 +225,628 @@
             
               
                 
+                <a class="post-title-link" href="/2017/03/14/cocoaPods/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-14T14:45:30+08:00" content="2017-03-14">
+              2017-03-14
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="cocoaPods"><a href="#cocoaPods" class="headerlink" title="cocoaPods"></a>cocoaPods</h3><p>  记录cocoaPods使用</p>
+<h4 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h4><pre><code>platform :ios, &apos;8.0&apos;
+use_frameworks!
+
+target &apos;MyApp&apos; do
+  pod &apos;AFNetworking&apos;, &apos;~&gt; 2.6&apos;
+  pod &apos;ORStackView&apos;, &apos;~&gt; 3.0&apos;
+  pod &apos;SwiftyJSON&apos;, &apos;~&gt; 2.3&apos;
+end
+</code></pre><h3 id="CREATE-A-POD"><a href="#CREATE-A-POD" class="headerlink" title="CREATE A POD"></a>CREATE A POD</h3><p>自己创建pod</p>
+<h5 id="格式-1"><a href="#格式-1" class="headerlink" title="格式"></a>格式</h5><pre><code>$ pod spec create Peanut
+$ edit Peanut.podspec
+$ pod spec lint Peanut.podspec
+</code></pre><h3 id="cocoaPods-Guides"><a href="#cocoaPods-Guides" class="headerlink" title="cocoaPods Guides"></a>cocoaPods Guides</h3><p><a href="https://guides.cocoapods.org/" target="_blank" rel="external">cocoaPods Guides</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/11/11/待学习目标/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-11T15:10:08+08:00" content="2016-11-11">
+              2016-11-11
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="待学习目标"><a href="#待学习目标" class="headerlink" title="待学习目标"></a>待学习目标</h1><ol>
+<li>UIKit的各种控件,理解其层次结构,响应链和绘制过程</li>
+<li>进行coreAnimation绘制</li>
+<li>设计模式</li>
+<li>基础的算法,数据结构</li>
+<li>AVFoundation框架</li>
+<li>TDD/BDD学习–(specta和Kiwi)</li>
+<li>swift 3 学习</li>
+<li>xib-code-StoryBoard熟练掌握</li>
+<li>instruments和Reveal的使用</li>
+<li>Core开头的各种框架</li>
+<li><a href="https://onevcat.com/2013/04/ios-interview/" target="_blank" rel="external">https://onevcat.com/2013/04/ios-interview/</a></li>
+<li><a href="https://onevcat.com/2012/04/objective-c-runtime/" target="_blank" rel="external">https://onevcat.com/2012/04/objective-c-runtime/</a></li>
+<li><a href="https://onevcat.com/2012/02/uiviewcontroller/" target="_blank" rel="external">https://onevcat.com/2012/02/uiviewcontroller/</a></li>
+<li><a href="https://onevcat.com/2011/11/objc-block/" target="_blank" rel="external">https://onevcat.com/2011/11/objc-block/</a></li>
+<li>Realm</li>
+<li>Core Foundation 对象的内存管理</li>
+<li>Instruments整理相应的blog</li>
+<li>KVO的实现原理以及实际应用场景(输入框的实时监控)</li>
+<li><p>取消section的 headerView 的粘性</p>
+<h2 id="取消键盘粘性"><a href="#取消键盘粘性" class="headerlink" title="取消键盘粘性"></a>取消键盘粘性</h2><ul>
+<li>(void)scrollViewDidScroll:(UIScrollView *)scrollView {<br>CGFloat sectionHeaderHeight = 30;<br>if (scrollView.contentOffset.y&lt;=sectionHeaderHeight&amp;&amp;scrollView.contentOffset.y&gt;=0) {<br>  scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);<br>} else if (scrollView.contentOffset.y&gt;=sectionHeaderHeight) {<br>  scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);<br>}<br>}</li>
+</ul>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/28/cocoa和cocoa_touch的区别/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-28T17:16:39+08:00" content="2016-09-28">
+              2016-09-28
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Cocoa和Cocoa-Touch的区别"><a href="#Cocoa和Cocoa-Touch的区别" class="headerlink" title="Cocoa和Cocoa Touch的区别"></a>Cocoa和Cocoa Touch的区别</h1><h2 id="Cocoa-是Mac-OS-X的开发环境-Cocoa-Touch-是iPhone-OS的开发环境"><a href="#Cocoa-是Mac-OS-X的开发环境-Cocoa-Touch-是iPhone-OS的开发环境" class="headerlink" title="Cocoa 是Mac OS X的开发环境,Cocoa Touch 是iPhone OS的开发环境"></a>Cocoa 是Mac OS X的开发环境,Cocoa Touch 是iPhone OS的开发环境</h2><p>  Cocoa:<br>    包含Foundation和AppKit框架,可用于开发Mac OS X 系统的应用程序</p>
+<p>  Cocoa Touch:<br>    包含Foundation和UIKit框架,可用于iPhone OS系统的应用程序</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/27/swift_闭包/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-27T09:03:11+08:00" content="2016-09-27">
+              2016-09-27
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="swift-闭包"><a href="#swift-闭包" class="headerlink" title="swift 闭包"></a>swift 闭包</h1><h2 id="闭包样式"><a href="#闭包样式" class="headerlink" title="闭包样式"></a>闭包样式</h2><pre><code>{(参数1,参数2) -&gt; 返回值
+    in
+}
+</code></pre><h2 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h2><p> 闭包的函数整体部分由关键字 in 导入,这个关键字表示闭包的形式参数类型和返回类型定义已经完成,并且闭包的函数体即将开始.</p>
+<h2 id="函数和闭包都是引用类型"><a href="#函数和闭包都是引用类型" class="headerlink" title="函数和闭包都是引用类型"></a>函数和闭包都是引用类型</h2><h2 id="逃逸闭包"><a href="#逃逸闭包" class="headerlink" title="逃逸闭包"></a>逃逸闭包</h2><p> 当闭包作为一个实际参数传递给一个函数的时候,我们就说这个闭包逃逸了.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/23/关于使用clang(llvm)将oc文件转为c++文件报错的问题/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-23T12:49:30+08:00" content="2016-09-23">
+              2016-09-23
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="关于使用Clang-LLVM-将OC文件转为C-C-文件报错的问题"><a href="#关于使用Clang-LLVM-将OC文件转为C-C-文件报错的问题" class="headerlink" title="关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题"></a>关于使用Clang(LLVM)将OC文件转为C/C++文件报错的问题</h1><h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><pre><code>main.m:9:9: fatal error: &apos;UIKit/UIKit.h&apos; file not found
+#import &lt;UIKit/UIKit.h&gt;
+    ^
+1 error generated.
+</code></pre><h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><pre><code>clang -x objective-c -rewrite-objc -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk xxx.m
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/23/c语言的指针_引用和取值/" itemprop="url">
+                  未命名
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-23T10:53:57+08:00" content="2016-09-23">
+              2016-09-23
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="C语言的指针-引用和取值"><a href="#C语言的指针-引用和取值" class="headerlink" title="C语言的指针 引用和取值"></a>C语言的指针 引用和取值</h1><h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><p>  指针是一个存储计算机内存地址的变量.</p>
+<h3 id="取值"><a href="#取值" class="headerlink" title="取值"></a>取值</h3><p>  从指针指向的内存读取数据称作指针的取值.指针可以指向某些具体类型的变量地址,例如int,long…</p>
+<h3 id=""><a href="#" class="headerlink" title="*"></a>*</h3><p>  操作符 <em> :<br>  既可以声明一个指针变量,也可以用作指针的取值.<br>  当生命一个变量的时候,</em> 用来表示声明了一个指针.其他情况表示指针的取值.</p>
+<h3 id="amp"><a href="#amp" class="headerlink" title="&amp;"></a>&amp;</h3><p>  地址操作符: &amp; :<br>  用来引用一个内存地址.通过在变量名字前使用 &amp; 操作符,我们可以得到该变量的内存地址.</p>
+<pre><code>// 声明一个int指针
+int *ptr;
+// 声明一个int值
+int val = 1;
+// 为指针分配一个int值的引用
+ptr = &amp;val;
+// 对指针进行取值，打印存储在指针地址中的内容
+int deref = *ptr;
+printf(&quot;%d\n&quot;, deref);
+</code></pre>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/01/my_first_blog/" itemprop="url">
                   My first blog
                 </a>
@@ -434,7 +1056,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -474,7 +1096,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
